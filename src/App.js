@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [activeHighlight, setActiveHighlight] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setActiveHighlight(true);
+    }, 1500);
+  });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit,{" "}
+      <span className={`highlight ${activeHighlight && "active-highlight"}`}>
+        <span>
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+          ut
+        </span>
+      </span>
+      aliquip ex ea commodo consequat.
     </div>
   );
 }
