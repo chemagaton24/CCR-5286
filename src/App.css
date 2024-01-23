@@ -5,17 +5,5 @@
 .highlight {
   display: inline;
   background-color: #000;
-  background-repeat: no-repeat;
-  background-size: 0 100%;
-  background-size: 100% 100%;
   color: #fff;
-}
-
-.active-highlight {
-  background-size: 100% 100%;
-}
-
-.highlight,
-.highlight span {
-  mix-blend-mode: difference;
 }
