@@ -5,9 +5,19 @@
 .highlight {
   display: inline;
   background-color: #fff;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#000),
+    to(#000)
+  );
+  background-image: -o-linear-gradient(#000, #000);
   background-image: linear-gradient(#000, #000);
   background-repeat: no-repeat;
   background-size: 0 100%;
+  -webkit-transition: background-size 4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -o-transition: background-size 4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   transition: background-size 4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   color: #fff;
 }
