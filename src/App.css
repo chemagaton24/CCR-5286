@@ -23,6 +23,11 @@
   -o-transition: background-size 4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   transition: background-size 4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   color: #fff;
+  will-change: opacity;
+}
+
+.highlight span {
+  --tw-bg-opacity: 1;
 }
 
 .highlight,
