@@ -21,6 +21,14 @@ function App() {
         </span>
       </span>
       aliquip ex ea commodo consequat.
+      <a href="" class="btn-anim">
+        Learn More About Services
+      </a>
+      <div class="box">
+        <a href="" class="btn-anim">
+          Learn More About Services
+        </a>
+      </div>
     </div>
   );
 }
