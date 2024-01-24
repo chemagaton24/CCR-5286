@@ -49,7 +49,7 @@
   left: 0px;
   height: 100%;
   width: 100%;
-  transition: transform cubic-bezier(0.88, 0.03, 0, 0.94) 0.3s;
+  transition: transform cubic-bezier(0.88, 0.03, 0, 0.94) 5s;
   will-change: opacity;
 }
 .btn-anim:before {
