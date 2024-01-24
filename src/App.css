@@ -6,6 +6,8 @@
 .highlight {
   display: inline;
   background-color: #fff;
+  background-size: 0 100%;
+  background-repeat: no-repeat;
   background-image: -webkit-gradient(
     linear,
     left top,
@@ -17,14 +19,15 @@
   background-image: linear-gradient(#000, #000);
   background-repeat: no-repeat;
   background-size: 0 100%;
-  -webkit-transition: background-size 4s;
-  -o-transition: background-size 4s;
-  transition: background-size 4s;
-  transform: translate3d(0, 0, 0);
+  -webkit-transition: background-size 4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -o-transition: background-size 4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: background-size 4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  color: #fff;
+  will-change: opacity;
 }
 
-.active-highlight {
-  background-size: 100% 100%;
+.highlight span {
+  --tw-bg-opacity: 1;
 }
 
 .highlight,
@@ -32,50 +35,6 @@
   mix-blend-mode: difference;
 }
 
-.btn-anim {
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-  padding: 1.25rem;
-  color: #fff;
-  --x: 66%;
-  --y: -34%;
-  transform: translate3d(0, 0, 0);
-}
-.btn-anim:after,
-.btn-anim:before {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 100%;
-  transition: transform cubic-bezier(0.88, 0.03, 0, 0.94) 5s;
-  will-change: opacity;
-}
-.btn-anim:before {
-  content: "";
-  position: absolute;
-  --tw-bg-opacity: 1;
-  background-color: rgb(243, 109, 69);
-  z-index: -1;
-  transform: translateX(var(--x));
-}
-.btn-anim:after {
-  content: "";
-  position: absolute;
-  --tw-bg-opacity: 1;
-  background-color: rgb(255, 255, 255);
-  mix-blend-mode: difference;
-  transform: translateX(var(--y));
-}
-.btn-anim:hover:before {
-  transform: translateX(0);
-}
-.btn-anim:hover:after {
-  transform: translateX(-100%);
-}
-.box {
-  padding: 40px;
-  margin: 20px;
-  background: #f1f1f1;
+.active-highlight {
+  background-size: 100% 100%;
 }
